@@ -9,36 +9,40 @@ import rootReducer from './store/reducers/rootReducer'
 import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 
-import { BrowserRouter, Route ,Switch} from 'react-router-dom'
+import firebase from './config/fbConfig'
 
-import {createFirestoreInstance, reduxFirestore, getFirestore } from 'redux-firestore'
-import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase';
-import firebase from 'firebase/app'
-import fbConfig from './config/fbConfig'
+import { createFirestoreInstance, reduxFirestore, getFirestore } from 'redux-firestore'
+import { ReactReduxFirebaseProvider, getFirebase } from 'react-redux-firebase'
 
+import 'firebase/firestore';
 
-const store = createStore(rootReducer,
-    compose(
-        applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
-        reduxFirestore(fbConfig)
-    )
-);
-
-
-const rrfConfig = {
-    userProfile: 'users',
-  }
-const rrfProps = {
-    firebase,
-    config: rrfConfig,
-    dispatch: store.dispatch,
-    createFirestoreInstance,
-
-
+const rrfConfig = { 
+    userProfile: 'projects',
+    useFirestoreForProfile: true
 }
 
+const store = createStore(rootReducer, 
+    compose(
+        applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
+        reduxFirestore(firebase)
+    )
+    );
 
-ReactDOM.render(<Provider store={store}><ReactReduxFirebaseProvider {...rrfProps}><App /></ReactReduxFirebaseProvider></Provider>, document.getElementById('root'));
+const rffProps = {
+    firebase,
+    useFirestoreForProfile: true,
+    config: rrfConfig,
+    dispatch: store.dispatch,
+    createFirestoreInstance
+}
+
+ReactDOM.render(
+    <Provider store={store}>
+        <ReactReduxFirebaseProvider {...rffProps}>
+            <App />  
+        </ReactReduxFirebaseProvider>
+    </Provider>, 
+document.getElementById('root'));
 
 registerServiceWorker();
 // });

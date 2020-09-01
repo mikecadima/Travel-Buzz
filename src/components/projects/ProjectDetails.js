@@ -17,7 +17,7 @@ const ProjectDetails = (props) => {
             <p>{project.content}</p>s
           </div>
           <div className="card-action grey lighten-4 grey-text">
-            <div>Posted by {project.authorFirstName} {project.authorLastName}</div>
+            <div>Posted by {project.email} </div>
             <div>{moment(project.createdAt.toDate()).calendar()}</div>
           </div>
         </div>
