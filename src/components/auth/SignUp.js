@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Redirect } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { signUp } from '../../store/actions/authActions'
-
+//decaring state and the fields that will be utilized by Firebase
 class SignUp extends Component {
   state = {
     email: '',
@@ -10,6 +10,7 @@ class SignUp extends Component {
     firstName: '',
     lastName: '',
   }
+  //fuctions to handle the changes and submission of information from user
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
@@ -23,6 +24,7 @@ class SignUp extends Component {
     const { auth, authError } = this.props;
     if (auth.uid) return <Redirect to='/' /> 
     return (
+      //JSX for input form
       <div className="container">
         <form className="white" onSubmit={this.handleSubmit}>
           <h5 className="grey-text text-darken-3">Sign Up</h5>
@@ -53,14 +55,14 @@ class SignUp extends Component {
     )
   }
 }
-
+// function that you would use to provide the store data to your component
 const mapStateToProps = (state) => {
   return {
     auth: state.firebase.auth,
     authError: state.auth.authError
   }
 }
-
+//something that you will use to provide the action creators as props to your component.
 const mapDispatchToProps = (dispatch)=> {
   return {
     signUp: (creds) => dispatch(signUp(creds))
