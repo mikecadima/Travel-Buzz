@@ -37,16 +37,16 @@ Solution: Made the Submit button route to main page and used funtion to check fo
   Solution: Reading documentation, experimenting with code and making sure all syntaxes are up to date with the current editions of the current year.
 
 # Sign in Page
-<img src="/img/signin.jpg width="100">
+[<img src="/img/signin.jpg width="100" />]
 
 # Sign up Page 
-<img src="/img/signup.jpg width="100">
+[<img src="/img/signup.jpg width="100" />]
 
 # Main Page
-<img src="/img/mainpage.jpg width="100">
+[<img src="/img/mainpage.jpg width="100" />]
 
 # Create Page
-<img src="/img/createPost.jpg width="100">
+[<img src="/img/createPost.jpg width="100" />]
 
 
 
