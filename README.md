@@ -11,12 +11,17 @@ Travel-Buzz is a platform for people to blog about their travels and any tips or
 Oversaw creation of Landing Page of project application. Utilized Landing page to create User profile or login. Once a user signs up for the application then they would be routed to main page. Oversaw create post page and ability to have notifications to update which user either joined the app or created a post. Oversaw database storage through Firebase/Firestore using authentication, collection of data from user and deployment.
 
 # What I used: Languages: 
-Materialize 
-CSS 
-CSS JAVASCRIPT React Redux JSX
+- Materialize 
+- CSS 
+- JAVASCRIPT
+- React
+- Redux
+- JSX
 
 # Other: 
-Firebase Firestore Google Calendar
+- Firebase
+- Firestore
+
 
 # MVP (Minimum Viable Product): 
 Initial design and layout Authentication of user and routes to main page Creation of posts Notifications of new user and posts Modern look of webpages Logout functionality
