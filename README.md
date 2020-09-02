@@ -37,16 +37,15 @@ Solution: Made the Submit button route to main page and used funtion to check fo
   Solution: Reading documentation, experimenting with code and making sure all syntaxes are up to date with the current editions of the current year.
 
 # Sign in Page
-[<img src="/img/signin.jpg width="100" />]
+![signin](https://user-images.githubusercontent.com/65040522/92013913-6bb34780-ed1c-11ea-9b02-57add75453c0.jpg)
 
 # Sign up Page 
-[<img src="/img/signup.jpg width="100" />]
+![signup](https://user-images.githubusercontent.com/65040522/92014128-bb920e80-ed1c-11ea-9ebc-477681b926d1.jpg)
 
 # Main Page
-[<img src="/img/mainpage.jpg width="100" />]
+![mainpage](https://user-images.githubusercontent.com/65040522/92014198-d6648300-ed1c-11ea-9140-a276e0f2daf0.jpg)
 
 # Create Page
-[<img src="/img/createPost.jpg width="100" />]
-
+![createPost](https://user-images.githubusercontent.com/65040522/92014240-eb411680-ed1c-11ea-8dfd-f13d0ab9ccbd.jpg)
 
 
