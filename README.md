@@ -36,19 +36,17 @@ Solution: Made the Submit button route to main page and used funtion to check fo
  Challenge: Creating new post with user account intergation.
   Solution: Reading documentation, experimenting with code and making sure all syntaxes are up to date with the current editions of the current year.
 
-# Code Snippets: This is the sign-up feature of my code using react. import React, { Component } from 'react' import { Redirect } from 'react-router-dom' import { connect } from 'react-redux' import { signUp } from '../../store/actions/authActions' //decaring state and the fields that will be utilized by Firebase class SignUp extends Component { state = { email: '', password: '', firstName: '', lastName: '', } //fuctions to handle the changes and submission of information from user handleChange = (e) => { this.setState({ [e.target.id]: e.target.value }) } handleSubmit = (e) => { e.preventDefault(); this.props.signUp(this.state); } render() { const { auth, authError } = this.props; if (auth.uid) return return ( //JSX for input form
+# Sign in Page
+<img src="/img/signin.jpg width="100">
 
-Sign Up
-Email
-Password
-First Name
-Last Name
-Sign Up
-{ authError ?
-{authError}
+# Sign up Page 
+<img src="/img/signup.jpg width="100">
 
-: null }
-) } } // function that you would use to provide the store data to your component const mapStateToProps = (state) => { return { auth: state.firebase.auth, authError: state.auth.authError } } //something that you will use to provide the action creators as props to your component. const mapDispatchToProps = (dispatch)=> { return { signUp: (creds) => dispatch(signUp(creds)) } }
-export default connect(mapStateToProps, mapDispatchToProps)(SignUp)
+# Main Page
+<img src="/img/mainpage.jpg width="100">
 
-# Demo
+# Create Page
+<img src="/img/createPost.jpg width="100">
+
+
+
